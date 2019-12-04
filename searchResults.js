@@ -15,7 +15,7 @@ function displayApartments(fetchApartments) {
    var mainContainer = document.getElementById("apartments");
    for (var i = 0; fetchApartments.length; i++) {
       var div = document.createElement("div");
-      div.innerHTML = "Title: " + '<a href="./bnbDetails.html">fetchApartments[i].title</a>';
+      div.innerHTML = "Title: " + `<a href="./bnbDetails.html">${fetchApartments[i].title}</a>`;
       mainContainer.appendChild(div);
 
 
