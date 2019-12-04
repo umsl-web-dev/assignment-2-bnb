@@ -1,37 +1,3 @@
-// let data = [
-//    { "title": "BNB", "availability": "Open", "price": "$100", "description": "Full apartment", "address": "UMSL", "photo": "xxx" },
-//    { "title": "BnB", "availability": "Open", "price": "$100", "description": "Just a couch", "address": "St. Louis", "photo": "xxx" },
-//    { "title": "bNB", "availability": "Open", "price": "$100", "description": "Basement", "address": "St. Charles", "photo": "xxx" },
-//    { "title": "bnb", "availability": "Open", "price": "$100", "description": "Condo", "address": "Somewhere", "photo": "xxx" },
-//    { "title": "bnB", "availability": "Open", "price": "$100", "description": "House", "address": "UMSL", "photo": "xxx" },
-// ]
-
-// console.log(data)
-// console.log(data.length)
-
-// renderdata = () => {
-//    for (places of data) {
-//       let li = document.createElement("li");
-//       let nUL = document.createElement("ul");
-//       let title = document.createTextNode(places.title);
-//       li.appendChild(title);
-//       let price = document.createTextNode(places.price);
-//       li.appendChild(price);
-//       let avail = document.createTextNode(places.availability);
-//       li.appendChild(avail);
-//       let desc = document.createTextNode(places.description);
-//       li.appendChild(desc);
-//       let address = document.createTextNode(places.address);
-//       li.appendChild(address);
-//       let photo = document.createTextNode(places.photo);
-//       li.appendChild(photo);
-//       document.getElementById("resultsUL").appendChild(li);
-//       //document.getElementsByTagName("li").setAttribute("id", "nestedUL");
-//       //document.getElementById("nestedUL").appendChild(nUL);
-//    }
-// };
-
-// renderdata();
 
 let fetchApartments = fetch('./apartments.json')
 
@@ -72,3 +38,4 @@ function displayApartments(fetchApartments) {
       ul.appendChild(liPH);
    }
 }
+
