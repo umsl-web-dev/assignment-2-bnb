@@ -20,9 +20,9 @@
 //   }
 // }
 
-let fetchApartments = fetch('./apartments.json')
+let fetchApartments = new Request('./apartments.json')
 
-fetchApartments.then(res => {
+fetch(fetchApartments).then(res => {
   return res.json();
 }).then(data => {
   let apartment = data;
@@ -34,9 +34,17 @@ fetchApartments.then(res => {
 
 function displayApartments(fetchApartments) {
   var mainContainer = document.getElementById("apartments");
-  for (var i = 0; fetchApartments.length; i++) {
-    var div = document.createElement("div");
-    div.innerHTML = "Title: " + fetchApartments[i].title;
-    mainContainer.appendChild(div);
-  }
+  var div = document.createElement("div");
+  div.innerHTML = "Title: " + fetchApartments[i].title;
+  mainContainer.appendChild(div);
+
 }
+
+// function displayApartments(fetchApartments) {
+//   var mainContainer = document.getElementById("apartments");
+//   for (var i = 0; fetchApartments.length; i++) {
+//     var div = document.createElement("div");
+//     div.innerHTML = "Title: " + fetchApartments[i].title;
+//     mainContainer.appendChild(div);
+//   }
+// }
