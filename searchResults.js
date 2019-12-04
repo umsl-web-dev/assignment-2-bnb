@@ -11,13 +11,13 @@ fetchApartments.then(res => {
    console.log('Fetch problem: ' + err)
 })
 
+
 function displayApartments(fetchApartments) {
    var mainContainer = document.getElementById("apartments");
    for (var i = 0; fetchApartments.length; i++) {
       var div = document.createElement("div");
-      div.innerHTML = "Title: " + `<a href="./bnbDetails.html">${fetchApartments[i].title}</a>`;
+      div.innerHTML = `<a href="./bnbDetails.html"> Title: ${fetchApartments[i].title}</a>`;
       mainContainer.appendChild(div);
-
 
       //create UL with li for other props
       let ul = document.createElement("ul");
