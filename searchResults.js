@@ -12,6 +12,7 @@ fetchApartments.then(res => {
 })
 
 //Function not working
+//window.open  Search how to navigate and send them through this function
 function saveIndexValue(index) {
    console.log(index);
    localStorage.setItem("index", JSON.stringify(index))
