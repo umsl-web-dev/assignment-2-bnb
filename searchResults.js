@@ -6,17 +6,22 @@ fetchApartments.then(res => {
 }).then(data => {
    let apartment = data;
    displayApartments(apartment);
-   console.log(apartment[0])
+   //console.log(apartment)
 }).catch(err => {
    console.log('Fetch problem: ' + err)
 })
 
+//Function not working
+function saveIndexValue(index) {
+   console.log(index);
+   localStorage.setItem("index", JSON.stringify(index))
+};
 
 function displayApartments(fetchApartments) {
    var mainContainer = document.getElementById("apartments");
-   for (var i = 0; fetchApartments.length; i++) {
+   for (let i = 0; fetchApartments.length; i++) {
       var div = document.createElement("div");
-      div.innerHTML = `<a href="./bnbDetails.html"> Title: ${fetchApartments[i].title}</a>`;
+      div.innerHTML = `<a onclick="saveIndexValue(${i})"> Title: ${fetchApartments[i].title}</a>`;
       mainContainer.appendChild(div);
 
       //create UL with li for other props
