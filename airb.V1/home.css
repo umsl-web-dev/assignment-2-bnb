@@ -41,7 +41,7 @@
 
 h1
 {
-    color:rgb(72, 72, 72);
+    color:#424241;
     display:block;
     font-family:Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
     font-size:24px;
@@ -51,10 +51,12 @@ h1
     width:377px;
     text-align: center;
     margin: auto;
+    
 }
 
 h5
 {
+  color:#424241;
   font-size: 16px;
   font-weight: 250; 
   letter-spacing: 1px;
