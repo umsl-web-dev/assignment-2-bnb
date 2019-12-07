@@ -5,6 +5,7 @@
     <title>Sign Up!</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel='stylesheet' type='text/css' media='screen' href='signup.css'>
+    <script src='signup.js'></script>
 </head>
 
 <body>
@@ -13,30 +14,26 @@
            
             <img src="./resource/bnbLogo.png" alt="Logo" class='logoImg logoImg mx-auto d-block'>
 
-            <div id='email' class='email'>
-            <input aria-autocomplete="list" aria-expanded="false" autocomplete="off" autocorrect="off" 
-            spellcheck="false" id="Koan-magic-carpet-koan-search-bar__input" role="combobox" value="" 
-            data-veloute="input__Koan-magic-carpet-koan-search-bar__input" name="query" placeholder="Email">
+            <!-- <form action = "./home.html"> -->
+            <div class='email'>
+            <input id='email' type='email' placeholder="Email" required>
             </div>
 
-            <div id='pass' class='inputs'>
-            <input aria-autocomplete="list" aria-expanded="false" autocomplete="off" autocorrect="off" 
-            spellcheck="false" id="Koan-magic-carpet-koan-search-bar__input" role="combobox" value="" 
-            data-veloute="input__Koan-magic-carpet-koan-search-bar__input" name="query" placeholder="Password">
+            <div class='inputs'>
+            <input id="pass" type ='password' placeholder="Password" required>
             </div>
 
-            <div id='cPass' class='inputs'>
-            <input aria-autocomplete="list" aria-expanded="false" autocomplete="off" autocorrect="off" 
-            spellcheck="false" id="Koan-magic-carpet-koan-search-bar__input" role="combobox" value="" 
-            data-veloute="input__Koan-magic-carpet-koan-search-bar__input" name="query" placeholder="Confirm Password">
+            <div class='inputs'>
+            <input id="cPass" type = 'password' placeholder="Confirm Password" required>
             </div>
-
-            <div id='signUp' class='signupDiv'>
-                <button class='btn'>Sign Up!</button>
+            
+            <div class='signupDiv'>
+                <button id='signUp' class='btn' onclick = 'checker()'>Sign Up!</button>
             </div>
+            </form>
 
-            <div id='loginB' class='acctDiv'>
-                <button class='btn'>Already have an account?</button>
+            <div class='acctDiv'>
+                <button id='loginB' class='btn'>Already have an account?</button>
             </div>
 
         </div>
