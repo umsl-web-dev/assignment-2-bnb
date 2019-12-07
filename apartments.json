@@ -5,7 +5,7 @@
       "price": 100,
       "description": "Apartment",
       "address": "MO",
-      "photo": "xxx"
+      "photo": "../resources/apartment1.jpg"
    },
    {
       "title": "BnB2",
@@ -13,7 +13,7 @@
       "price": 150,
       "description": "House",
       "address": "NY",
-      "photo": "xxx"
+      "photo": "../resources/apartment2.jpg"
    },
    {
       "title": "BnB3",
@@ -21,6 +21,6 @@
       "price": 200,
       "description": "Condo",
       "address": "MA",
-      "photo": "xxx"
+      "photo": "../resources/apartment3.jpg"
    }
 ]

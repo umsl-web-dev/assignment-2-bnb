@@ -13,7 +13,7 @@ fetchApartments.then(res => {
 
 //save index to local storage and open bnbDetails page
 function saveIndexValue(index) {
-   console.log(index);
+   //console.log(index);
    localStorage.setItem("index", JSON.stringify(index))
    window.open("./bnbDetails.html");
 };
@@ -41,9 +41,9 @@ function displayApartments(fetchApartments) {
       let liADD = document.createElement("li");
       liADD.innerHTML = "Address: " + fetchApartments[i].address;
       ul.appendChild(liADD);
-      let liPH = document.createElement("li");
-      liPH.innerHTML = "Photo: " + fetchApartments[i].photo;
-      ul.appendChild(liPH);
+      let img = document.createElement("img");
+      img.src = fetchApartments[i].photo;
+      ul.appendChild(img);
    }
 }
 
