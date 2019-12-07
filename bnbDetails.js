@@ -16,16 +16,13 @@ window.onload = () => {
    })
 };
 
-
-
-
 function displayApartment(fetchApartment) {
-   console.log(fetchApartment[index])
-   let mainDiv = document.getElementById("main");
+   //console.log(fetchApartment[index])
+   //let mainDiv = document.getElementById("main");
    let photoDiv = document.getElementById("photo");
-   let childDiv = document.getElementById("child");
+   //let childDiv = document.getElementById("child");
    let titleDiv = document.getElementById("title");
-   let infoDiv = document.getElementById("info");
+   //let infoDiv = document.getElementById("info");
    let ul = document.getElementById("deets")
 
    //title
@@ -55,3 +52,18 @@ function displayApartment(fetchApartment) {
 }
 
 
+//open confirmation page and check date selection
+//Not working currently
+let confPage = () => {
+   let confDate = document.getElementByName("date");
+
+   console.log(confDate)
+
+   // if (confDate === null) {
+   //    window.alert("Please Select a valid Date!")
+   //    console.log("confDate").value
+   // } else {
+   //    window.open("./bookConf.html");
+   //    console.log("confDate").value
+   // }
+}
