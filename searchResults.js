@@ -11,13 +11,14 @@ fetchApartments.then(res => {
    console.log('Fetch problem: ' + err)
 })
 
-//Function not working
-//window.open  Search how to navigate and send them through this function
+//save index to local storage and open bnbDetails page
 function saveIndexValue(index) {
    console.log(index);
    localStorage.setItem("index", JSON.stringify(index))
+   window.open("./bnbDetails.html");
 };
 
+//Display list of apartments
 function displayApartments(fetchApartments) {
    var mainContainer = document.getElementById("apartments");
    for (let i = 0; fetchApartments.length; i++) {
