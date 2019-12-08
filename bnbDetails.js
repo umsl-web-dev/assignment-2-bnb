@@ -52,18 +52,18 @@ function displayApartment(fetchApartment) {
 }
 
 
-//open confirmation page and check date selection
-//Not working currently
-let confPage = () => {
-   let confDate = document.getElementByName("date");
+//open confirmation page and save dates
+let saveDate = () => {
+   let sDate = document.getElementById("startDate").value;
+   let eDate = document.getElementById("endDate").value;
 
-   console.log(confDate)
+   if ((sDate && eDate) !== (null || "")) {
+      window.open('./bookConf.html');
+      window.close('./bnbDetails.html');
+   } else {
+      window.alert("Please Select a valid Date!")
+   }
 
-   // if (confDate === null) {
-   //    window.alert("Please Select a valid Date!")
-   //    console.log("confDate").value
-   // } else {
-   //    window.open("./bookConf.html");
-   //    console.log("confDate").value
-   // }
+   localStorage.setItem("sDate", JSON.stringify(sDate))
+   localStorage.setItem("eDate", JSON.stringify(eDate))
 }

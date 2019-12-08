@@ -27,9 +27,11 @@
          <!-- For the Title -->
          <div id="title">
             <form>
-               <label>Chose your Date(s): </label>
-               <input type="text" id="date" name="date" placeholder="Type your dates in mm/dd/yyyy format" required />
-               <input type="submit" onclick="confPage()" />
+               <label>Chose your Start Date: </label>
+               <input type="date" id="startDate" name="date" required />
+               <label>Chose your End Date: </label>
+               <input type="date" id="endDate" name="date" required />
+               <input type="submit" onclick="saveDate();" />
             </form>
          </div>
 
