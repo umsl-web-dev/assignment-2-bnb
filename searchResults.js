@@ -48,6 +48,6 @@ function displayApartments(fetchApartments) {
 }
 
 let goHome = () => {
-   window.open('./homePage.html');
+   window.open('./airb.V1/home.html');
    window.close('./bookConf.html');
 }
