@@ -1,4 +1,3 @@
-
 window.onload = () => {
    function isAuth() {
       sEmail = JSON.parse(window.localStorage.getItem("email"))
