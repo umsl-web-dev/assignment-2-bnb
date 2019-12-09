@@ -1,12 +1,3 @@
-// emailS = document.getElementById("email").value;
-
-
-// checker = () => 
-// {    
-//     alert(emailS);
-// }
-
-
 function signUp() {
    let email = document.getElementById("email").value;
    let password = document.getElementById("pass").value;
