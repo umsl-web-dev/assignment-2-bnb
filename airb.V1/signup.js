@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 window.onload = () => {
    function isAuth() {
       sEmail = JSON.parse(window.localStorage.getItem("email"))
@@ -15,16 +13,6 @@ window.onload = () => {
 }
 
 
-// emailS = document.getElementById("email").value;
-
-
-// checker = () => 
-// {    
-//     alert(emailS);
-// }
-
-
->>>>>>> e17bc5661d1e855134229ec9c432b2548258cbb1
 function signUp() {
    let email = document.getElementById("email").value;
    let password = document.getElementById("pass").value;
