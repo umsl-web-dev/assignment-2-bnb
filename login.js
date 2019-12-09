@@ -21,12 +21,11 @@ function login() {
    let users = JSON.parse(window.localStorage.getItem("users"))
    console.log(users)
 
-
    for (i = 0; i < users.length; i++) {
       sEmail = users[i].email;
-      console.log(sEmail)
+      //console.log(sEmail)
       sPass = users[i].password;
-      console.log(sPass)
+      //console.log(sPass)
       if ((email === sEmail) && (password === sPass)) {
          window.open('./airb.V1/home.html');
          window.close('./login.html');
