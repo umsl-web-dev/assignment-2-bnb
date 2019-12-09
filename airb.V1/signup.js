@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0232e48686df34db0d93efd79f028dc9e2d797ae
 window.onload = () => {
    function isAuth() {
       sEmail = JSON.parse(window.localStorage.getItem("email"))
@@ -12,13 +16,16 @@ window.onload = () => {
    }
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0232e48686df34db0d93efd79f028dc9e2d797ae
 function signUp() {
    let email = document.getElementById("email").value;
    let password = document.getElementById("pass").value;
    let cPass = document.getElementById("cPass").value;
 
-   if (((email && password && cPass) !== null) && (password === cPass)) {
+   if (((email && password && cPass) !== (null || "")) && (password === cPass)) {
       window.open('../airb.V1/home.html');
       window.close('../airb.V1/signup.html');
       localStorage.setItem("email", JSON.stringify(email))
