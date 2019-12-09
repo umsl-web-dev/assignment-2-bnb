@@ -1,3 +1,14 @@
+window.onload = () => {
+   function isAuth() {
+      sEmail = JSON.parse(window.localStorage.getItem("email"))
+      sPass = JSON.parse(window.localStorage.getItem("password"))
+      if ((sEmail && sPass) !== (null || "")) {
+         //User is authenticated
+      } else {
+         //User is not authenticated
+      }
+   }
+}
 
 let fetchApartments = fetch('./apartments.json')
 

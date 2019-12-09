@@ -14,6 +14,18 @@ window.onload = () => {
    }).catch(err => {
       console.log('Fetch problem: ' + err)
    })
+
+   function isAuth() {
+      sEmail = JSON.parse(window.localStorage.getItem("email"))
+      sPass = JSON.parse(window.localStorage.getItem("password"))
+      if ((sEmail && sPass) !== (null || "")) {
+         //User is authenticated
+         //Display certain properties in NAV bar
+      } else {
+         //User is not authenticated
+         //Display certain properties in NAV bar
+      }
+   }
 };
 
 function displayApartment(fetchApartment) {
@@ -58,6 +70,9 @@ let saveDate = () => {
    let eDate = document.getElementById("endDate").value;
 
    if ((sDate && eDate) !== (null || "")) {
+      //write logic for comments below
+      //if (User is authenticated) then open conf page
+      //if not authenticated take to login page, but needs to redirect to conf after login
       window.open('./bookConf.html');
       window.close('./bnbDetails.html');
    } else {

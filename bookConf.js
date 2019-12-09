@@ -15,8 +15,20 @@ window.onload = () => {
    }).catch(err => {
       console.log('Fetch problem: ' + err)
    });
-};
 
+   function isAuth() {
+      sEmail = JSON.parse(window.localStorage.getItem("email"))
+      sPass = JSON.parse(window.localStorage.getItem("password"))
+      if ((sEmail && sPass) !== (null || "")) {
+         //User is authenticated
+         //continue on
+      } else {
+         //User must make an account and sign in
+         //DO we need isAuth here? they should be verified in bnbDetails before coming here 
+      }
+   }
+
+};
 
 
 function displayApartment(fetchApartment) {
@@ -51,9 +63,9 @@ function displayApartment(fetchApartment) {
    confirmation.innerHTML = "Confirmation Number: " + conf;
    info.appendChild(confirmation);
 
-}
+};
 
-function goHome {
+function goHome() {
    window.open('./airb.V1/home.html');
    window.close('./bookConf.html');
    window.localStorage.removeItem(index);
