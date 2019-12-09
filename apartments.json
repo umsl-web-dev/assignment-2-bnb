@@ -1,0 +1,26 @@
+[
+   {
+      "title": "BnB1",
+      "availability": "January",
+      "price": 100,
+      "description": "Apartment",
+      "address": "MO",
+      "photo": "../resources/apartment1.jpg"
+   },
+   {
+      "title": "BnB2",
+      "availability": "April",
+      "price": 150,
+      "description": "House",
+      "address": "NY",
+      "photo": "../resources/apartment2.jpg"
+   },
+   {
+      "title": "BnB3",
+      "availability": "March",
+      "price": 200,
+      "description": "Condo",
+      "address": "MA",
+      "photo": "../resources/apartment3.jpg"
+   }
+]
