@@ -20,12 +20,9 @@ window.onload = () => {
 
 
 function displayApartment(fetchApartment) {
-   console.log(fetchApartment[index])
-   //let mainDiv = document.getElementById("main");
+   //console.log(fetchApartment[index])
    let photoDiv = document.getElementById("photo");
-   //let childDiv = document.getElementById("child");
    let info = document.getElementById("conf");
-   //let infoDiv = document.getElementById("info");
 
    //title
    let pTitle = document.createElement("h1");
@@ -36,4 +33,30 @@ function displayApartment(fetchApartment) {
    let img = document.createElement("img");
    img.src = fetchApartment[index].photo;
    photoDiv.appendChild(img);
+
+   //Dates
+   let start = document.createElement("h3");
+   start.innerHTML = "Start Date: " + sDate;
+   info.appendChild(start);
+   let end = document.createElement("h3");
+   end.innerHTML = "End Date: " + eDate;
+   info.appendChild(end);
+
+   //generate and display random confirmation number
+   let conf = "";
+   for (let i = 0; i < 10; i++) {
+      conf += Math.floor(Math.random() * 10);
+   };
+   let confirmation = document.createElement("h3");
+   confirmation.innerHTML = "Confirmation Number: " + conf;
+   info.appendChild(confirmation);
+
 }
+
+function goHome {
+   window.open('./homePage.html');
+   window.close('./bookConf.html');
+   window.localStorage.removeItem(index);
+   window.localStorage.removeItem(eDate);
+   window.localstorage.removeItem(sDate);
+};

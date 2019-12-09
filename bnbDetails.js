@@ -67,3 +67,9 @@ let saveDate = () => {
    localStorage.setItem("sDate", JSON.stringify(sDate))
    localStorage.setItem("eDate", JSON.stringify(eDate))
 }
+
+let goBack = () => {
+   window.open('./searchResults.html');
+   window.close('./bnbDetails.html');
+   storage.removeItem(index);
+}

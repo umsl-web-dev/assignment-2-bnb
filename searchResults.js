@@ -47,3 +47,7 @@ function displayApartments(fetchApartments) {
    }
 }
 
+let goHome = () => {
+   window.open('./homePage.html');
+   window.close('./bookConf.html');
+}
