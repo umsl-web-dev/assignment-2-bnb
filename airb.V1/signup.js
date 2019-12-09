@@ -27,7 +27,7 @@ function signUp() {
    let password = document.getElementById("pass").value;
    let cPass = document.getElementById("cPass").value;
 
-   if (((email && password && cPass) !== null) && (password === cPass)) {
+   if (((email && password && cPass) !== (null || "")) && (password === cPass)) {
       window.open('../airb.V1/home.html');
       window.close('../airb.V1/signup.html');
       localStorage.setItem("email", JSON.stringify(email))
