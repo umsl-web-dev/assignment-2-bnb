@@ -1,3 +1,30 @@
+<<<<<<< HEAD
+=======
+window.onload = () => {
+   function isAuth() {
+      sEmail = JSON.parse(window.localStorage.getItem("email"))
+      sPass = JSON.parse(window.localStorage.getItem("password"))
+      if ((sEmail && sPass) !== (null || "")) {
+         //User is authenticated
+         //redirect to home page and authenticate
+      } else {
+         //User is not authenticated
+         //remain on page
+      }
+   }
+}
+
+
+// emailS = document.getElementById("email").value;
+
+
+// checker = () => 
+// {    
+//     alert(emailS);
+// }
+
+
+>>>>>>> e17bc5661d1e855134229ec9c432b2548258cbb1
 function signUp() {
    let email = document.getElementById("email").value;
    let password = document.getElementById("pass").value;
