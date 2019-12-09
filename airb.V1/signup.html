@@ -5,7 +5,7 @@
     <title>Sign Up!</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel='stylesheet' type='text/css' media='screen' href='signup.css'>
-    <script src='signup.js'></script>
+    <script src="signup.js"></script>
 </head>
 
 <body>
@@ -14,13 +14,13 @@
            
             <img src="./resource/bnbLogo.png" alt="Logo" class='logoImg logoImg mx-auto d-block'>
 
-            <!-- <form action = "./home.html"> -->
-            <div class='email'>
-            <input id='email' type='email' placeholder="Email" required>
+            <form>
+            <div class="emailDiv">
+            <input id="eID" type="email" placeholder="Email" required>
             </div>
 
             <div class='inputs'>
-            <input id="pass" type ='password' placeholder="Password" required>
+            <input id="pass" type='password' placeholder="Password" required>
             </div>
 
             <div class='inputs'>
@@ -28,7 +28,7 @@
             </div>
             
             <div class='signupDiv'>
-                <button id='signUp' class='btn' onclick = 'checker()'>Sign Up!</button>
+                <button id="signUp" class='btn' onclick="passValid()">Sign Up!</button>
             </div>
             </form>
 
