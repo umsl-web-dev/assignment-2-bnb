@@ -12,15 +12,7 @@ window.onload = () => {
    }
 }
 
-
-// emailS = document.getElementById("email").value;
-
-
-// checker = () => 
-// {    
-//     alert(emailS);
-// }
-
+let users = []
 
 function signUp() {
    let email = document.getElementById("email").value;
@@ -28,10 +20,15 @@ function signUp() {
    let cPass = document.getElementById("cPass").value;
 
    if (((email && password && cPass) !== (null || "")) && (password === cPass)) {
+      let tempObj = {
+         email: email,
+         password: password
+      };
+      saveToLocalStorage(tempObj)
       window.open('../airb.V1/home.html');
-      window.close('../airb.V1/signup.html');
-      localStorage.setItem("email", JSON.stringify(email))
-      localStorage.setItem("password", JSON.stringify(password))
+      //window.close('../airb.V1/signup.html');
+      // localStorage.setItem("email", JSON.stringify(users.email));
+      // localStorage.setItem("password", JSON.stringify(users.password));
    } else if ((email !== null) && (password !== cPass)) {
       window.alert("Your Passwords do not match.")
    }
@@ -43,4 +40,10 @@ function signUp() {
 function login() {
    window.close("../airb.V1/signup.html")
    window.open("../login.html")
+}
+
+
+function saveToLocalStorage(user) {
+   users.push(user)
+   localStorage.setItem("users", JSON.stringify(users));
 }
