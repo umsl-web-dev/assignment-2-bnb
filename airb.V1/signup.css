@@ -1,0 +1,59 @@
+.signDiv
+{
+    background-color: whitesmoke; 
+    color: black;
+    box-sizing:border-box;
+    margin: 0 auto;
+    margin-top: 60px;
+    line-height:20.02px;
+    padding-bottom:24px;
+    padding-left:32px;
+    padding-right:32px;
+    padding-top:32px;
+    height:474.667px;
+    width:480px;
+    -webkit-font-smoothing:antialiased;
+    /* rounds the edges */
+    border-bottom-left-radius:4px;
+    border-bottom-right-radius:4px;
+    border-top-left-radius:4px;
+    border-top-right-radius:4px;
+}
+
+.logoImg
+{
+    border-radius: 46%;
+    height: 115px;
+}
+
+.email
+{
+    padding-top: 45px;
+    padding-left: 115px
+}
+
+.inputs
+{
+    padding-left: 115px;
+    padding-top: 20px; 
+}
+
+.btn
+{
+    color: #333333;
+    padding: 5px 20px;
+    border: 1px solid #a0a0a0;
+    border-radius: 20px;
+}
+
+.signupDiv
+{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.acctDiv
+{
+    margin-top: 1px;
+    text-align: center;
+}
