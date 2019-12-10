@@ -1,3 +1,4 @@
+
 window.onload = () => {
    if ((JSON.parse(window.localStorage.getItem("authenticated")) == true) && (JSON.parse(window.localStorage.getItem("authUser")) !== (null || ""))) {
       location.assign("./airb.V1/home.html")
@@ -6,7 +7,9 @@ window.onload = () => {
    }
 }
 
+
 let users = []
+
 
 function signUp() {
    let email = document.getElementById("email").value;
