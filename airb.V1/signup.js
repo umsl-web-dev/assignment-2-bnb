@@ -1,3 +1,4 @@
+
 window.onload = () => {
    function isAuth() {
       sEmail = JSON.parse(window.localStorage.getItem("email"))
@@ -12,7 +13,9 @@ window.onload = () => {
    }
 }
 
+
 let users = []
+
 
 function signUp() {
    let email = document.getElementById("email").value;
