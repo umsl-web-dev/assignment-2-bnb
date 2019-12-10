@@ -34,10 +34,6 @@ function login() {
       }
    }
 
-
-
-
-
 };
 
 function signUp() {
