@@ -1,4 +1,7 @@
+window.onload = () => {
+   isAuth();
 
+};
 
 let fetchApartments = fetch('./apartments.json')
 
@@ -15,7 +18,6 @@ fetchApartments.then(res => {
 
 //save index to local storage and open bnbDetails page
 function saveIndexValue(index) {
-   //console.log(index);
    localStorage.setItem("index", JSON.stringify(index))
    location.assign("./bnbDetails.html");
 };
@@ -54,3 +56,19 @@ let goHome = () => {
    window.localStorage.removeItem("sDate");
    window.localStorage.removeItem("eDate");
 }
+
+let isAuth = () => {
+   authUser = JSON.parse(window.localStorage.getItem("authUser"));
+   loggedUser = document.getElementById("authUser")
+   if ((JSON.parse(window.localStorage.getItem("authenticated")) == true) && (JSON.parse(window.localStorage.getItem("authUser")) !== (null || ""))) {
+      loggedUser.innerHTML = "Signed In As: " + authUser.email;
+   } else {
+      loggedUser.innerHTML = `<a href="./login.html">Login Now: </a>`;
+   }
+}
+
+let logout = () => {
+   window.localStorage.setItem("authenticated", false)
+   window.localStorage.removeItem("authUser")
+}
+
