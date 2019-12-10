@@ -1,4 +1,6 @@
 window.onload = () => {
+   isAuth();
+
    index = JSON.parse(window.localStorage.getItem("index"));
    sDate = JSON.parse(window.localStorage.getItem("sDate"));
    eDate = JSON.parse(window.localStorage.getItem("eDate"));
@@ -59,3 +61,14 @@ function goHome() {
    window.localStorage.removeItem("eDate");
    window.localStorage.removeItem("sDate");
 };
+
+let isAuth = () => {
+   authUser = JSON.parse(window.localStorage.getItem("authUser"));
+   loggedUser = document.getElementById("authUser")
+   loggedUser.innerHTML = "Signed In As: " + authUser.email;
+}
+
+let logout = () => {
+   window.localStorage.setItem("authenticated", false)
+   window.localStorage.removeItem("authUser")
+}
