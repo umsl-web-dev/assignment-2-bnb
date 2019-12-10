@@ -11,9 +11,10 @@
 </head>
 
 <body>
-   <nav>
-      <h1>Your Next BnB!</h1>
-      <button onclick="goBack()">Go Back</button>
+   <nav id="nav" style="padding-top: 15px; padding-right: 10px;">
+      <h2>Your Next BnB</h2>
+      <h5 id="authUser"></h5>
+      <button style="float: right;" onclick="goHome()">Return Home</button>
    </nav>
 
    <!-- Main Div -->
@@ -27,13 +28,15 @@
 
          <!-- For the Title -->
          <div id="title">
-            <form>
+            <form onsubmit="saveData()">
                <label>Chose your Start Date: </label>
                <input type="date" id="startDate" name="date" required />
                <label>Chose your End Date: </label>
                <input type="date" id="endDate" name="date" required />
-               <input type="submit" id="subBut" onclick="saveDate();" />
+               <input type="submit" id="subBut" value="Confirm Your Booking" />
+
             </form>
+
          </div>
 
          <!-- For the information -->
@@ -45,9 +48,6 @@
 
       </div>
    </div>
-
-
-
 </body>
 
 </html>
