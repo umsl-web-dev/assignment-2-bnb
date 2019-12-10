@@ -3,14 +3,14 @@
 let fetchApartments = fetch('./apartments.json')
 
 fetchApartments.then(res => {
-   return res.json();
+  return res.json();
 }).then(data => {
    let apartment = data;
    console.log(apartment);
    displayApartments(apartment);
    //console.log(apartment);
 }).catch(err => {
-   console.log('Fetch problem: ' + err)
+  console.log('Fetch problem: ' + err)
 })
 
 //save index to local storage and open bnbDetails page
