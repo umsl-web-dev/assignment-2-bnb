@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <title>BNB Details</title>
+   <script type="text/javascript" src="apartments.json"></script>
+   <script src="./bnbDetails.js"></script>
+   <!-- <script type="text/javascript" src="searchResults.js"></script> -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+   <nav>
+      <h1>Your Next BnB!</h1>
+      <form>
+         <label>
+            <button onclick="goBack()">Go Back</button>
+         </label>
+      </form>
+   </nav>
+
+   <!-- Main Div -->
+   <div id="main">
+
+      <!-- For the Photo -->
+      <div id="photo"> </div>
+
+      <!-- Div for Title and Information floated to right of photo -->
+      <div id="child">
+
+         <!-- For the Title -->
+         <div id="title">
+            <form>
+               <label>Chose your Start Date: </label>
+               <input type="date" id="startDate" name="date" required />
+               <label>Chose your End Date: </label>
+               <input type="date" id="endDate" name="date" required />
+               <input type="submit" onclick="saveDate();" />
+            </form>
+         </div>
+
+         <!-- For the information -->
+         <div id="info">
+            <ul id="deets">
+
+            </ul>
+         </div>
+
+      </div>
+   </div>
+
+
+
+</body>
+
+</html>
