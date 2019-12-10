@@ -19,10 +19,10 @@ function signUp() {
          password: password
       };
       saveToLocalStorage(tempObj)
-      location.assign("./airb.V1/home.html")
+      location.assign("../airb.V1/home.html")
       authenticated = true;
       localStorage.setItem("authenticated", JSON.stringify(authenticated));
-      let authUser = users[i];
+      let authUser = tempObj;
       localStorage.setItem("authUser", JSON.stringify(authUser));
    } else if ((email !== null) && (password !== cPass)) {
       window.alert("Your Passwords do not match.")

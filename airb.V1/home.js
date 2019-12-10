@@ -20,7 +20,13 @@ let isAuth = () => {
    loggedUser = document.getElementById("authUser")
    if ((JSON.parse(window.localStorage.getItem("authenticated")) == true) && (JSON.parse(window.localStorage.getItem("authUser")) !== (null || ""))) {
       loggedUser.innerHTML = "Signed In As: " + authUser.email;
+
    } else {
-      loggedUser.innerHTML = `<a href="./login.html">Sign Up: </a>`;
+      loggedUser.innerHTML = `<a href="../airb.V1/signup.html">Sign Up: </a>`;
    }
 };
+
+let logout = () => {
+   window.localStorage.setItem("authenticated", false)
+   window.localStorage.removeItem("authUser")
+}

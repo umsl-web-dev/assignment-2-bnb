@@ -59,12 +59,15 @@ function displayApartment(fetchApartment) {
 let saveDate = () => {
    let sDate = document.getElementById("startDate").value;
    let eDate = document.getElementById("endDate").value;
+   console.log("In Save Date")
 
    if ((sDate && eDate) !== (null || "")) {
+      console.log("INside top of IF")
       localStorage.setItem("sDate", JSON.stringify(sDate))
       localStorage.setItem("eDate", JSON.stringify(eDate))
-      window.location.assign("./bookConf.html")
+      location.assign("./bookConf.html")
    } else {
+      console.log("inside alert")
       window.alert("Please Select a valid Date!")
    }
 }
@@ -81,5 +84,11 @@ let isAuth = () => {
       loggedUser.innerHTML = "Signed In As: " + authUser.email;
    } else {
       loggedUser.innerHTML = `<a href="./login.html">Login Now: </a>`;
+      document.getElementById("subBut").disabled = true;
    }
 };
+
+let logout = () => {
+   window.localStorage.setItem("authenticated", false)
+   window.localStorage.removeItem("authUser")
+}

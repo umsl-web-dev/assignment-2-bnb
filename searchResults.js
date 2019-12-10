@@ -66,3 +66,8 @@ let isAuth = () => {
       loggedUser.innerHTML = `<a href="./login.html">Login Now: </a>`;
    }
 }
+
+let logout = () => {
+   window.localStorage.setItem("authenticated", false)
+   window.localStorage.removeItem("authUser")
+}

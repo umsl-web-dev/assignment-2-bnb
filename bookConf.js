@@ -67,3 +67,8 @@ let isAuth = () => {
    loggedUser = document.getElementById("authUser")
    loggedUser.innerHTML = "Signed In As: " + authUser.email;
 }
+
+let logout = () => {
+   window.localStorage.setItem("authenticated", false)
+   window.localStorage.removeItem("authUser")
+}
