@@ -66,8 +66,7 @@ function displayApartment(fetchApartment) {
 };
 
 function goHome() {
-   window.open('./airb.V1/home.html');
-   window.close('./bookConf.html');
+   location.assign("./airb.V1/home.html")
    window.localStorage.removeItem(index);
    window.localStorage.removeItem(eDate);
    window.localstorage.removeItem(sDate);

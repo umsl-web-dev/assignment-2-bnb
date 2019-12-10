@@ -26,6 +26,14 @@ window.onload = () => {
          //Display certain properties in NAV bar
       }
    }
+
+   let startDate = document.getElementById("startDate");
+   let endDate = document.getElementById("endDate");
+   sDate = JSON.parse(window.localStorage.getItem("sDate"));
+   eDate = JSON.parse(window.localStorage.getItem("eDate"));
+   startDate.value = sDate;
+   endDate.value = eDate;
+
 };
 
 function displayApartment(fetchApartment) {
@@ -84,7 +92,6 @@ let saveDate = () => {
 }
 
 let goBack = () => {
-   window.open('./searchResults.html');
-   window.close('./bnbDetails.html');
+   location.assign("./searchResults.html")
    storage.removeItem(index);
 }

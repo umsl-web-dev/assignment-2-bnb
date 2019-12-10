@@ -26,7 +26,7 @@ fetchApartments.then(res => {
 function saveIndexValue(index) {
    //console.log(index);
    localStorage.setItem("index", JSON.stringify(index))
-   window.open("./bnbDetails.html");
+   location.assign("./bnbDetails.html");
 };
 
 //Display list of apartments
@@ -59,6 +59,5 @@ function displayApartments(fetchApartments) {
 }
 
 let goHome = () => {
-   window.open('./airb.V1/home.html');
-   window.close('./bookConf.html');
+   location.assign("./airb.V1/home.html")
 }

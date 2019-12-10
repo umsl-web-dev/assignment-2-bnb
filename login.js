@@ -27,20 +27,14 @@ function login() {
       sPass = users[i].password;
       //console.log(sPass)
       if ((email === sEmail) && (password === sPass)) {
-         window.open('./airb.V1/home.html');
-         window.close('./login.html');
+         location.assign("./airb.V1/home.html")
       } else {
          window.alert("Please enter a valid email and Password")
       }
    }
 
-
-
-
-
 };
 
 function signUp() {
-   window.open('./airb.V1/signup.html');
-   window.close('./login.html');
+   location.assign("./airb.V1/signup.html")
 };
