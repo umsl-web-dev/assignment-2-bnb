@@ -1,15 +1,9 @@
 
 window.onload = () => {
-   function isAuth() {
-      sEmail = JSON.parse(window.localStorage.getItem("email"))
-      sPass = JSON.parse(window.localStorage.getItem("password"))
-      if ((sEmail && sPass) !== (null || "")) {
-         //User is authenticated
-         //redirect to home page and authenticate
-      } else {
-         //User is not authenticated
-         //remain on page
-      }
+   if ((JSON.parse(window.localStorage.getItem("authenticated")) == true) && (JSON.parse(window.localStorage.getItem("authUser")) !== (null || ""))) {
+      location.assign("./airb.V1/home.html")
+   } else {
+      //Do nothing
    }
 }
 
@@ -41,8 +35,7 @@ function signUp() {
 };
 
 function login() {
-   window.close("../airb.V1/signup.html")
-   window.open("../login.html")
+   location.assign("../login.html")
 }
 
 
