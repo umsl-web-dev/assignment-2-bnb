@@ -6,9 +6,9 @@ fetchApartments.then(res => {
    return res.json();
 }).then(data => {
    let apartment = data;
-   console.log(data);
-   displayApartments(apartment);
    console.log(apartment);
+   displayApartments(apartment);
+   //console.log(apartment);
 }).catch(err => {
    console.log('Fetch problem: ' + err)
 })
@@ -23,7 +23,6 @@ function saveIndexValue(index) {
 //Display list of apartments
 function displayApartments(fetchApartments) {
    var mainContainer = document.getElementById("apartments");
-   console.log(fetchApartments);
    for (let i = 0; fetchApartments.length; i++) {
       var div = document.createElement("div");
       div.innerHTML = `<a onclick="saveIndexValue(${i})"> ${fetchApartments[i].title}</a>`;
@@ -51,7 +50,7 @@ function displayApartments(fetchApartments) {
 }
 
 let goHome = () => {
-   window.location.href = "./airb.V1/home.html";
+   window.location.assign("./airb.V1/home.html");
    window.localStorage.removeItem("sDate");
    window.localStorage.removeItem("eDate");
 }

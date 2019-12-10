@@ -1,11 +1,5 @@
 window.onload = () => {
-   if ((JSON.parse(window.localStorage.getItem("authenticated")) == true) && (JSON.parse(window.localStorage.getItem("authUser")) !== (null || ""))) {
-      //set nav bar to "Logged in as: " + authUser
-
-   } else {
-      //disable submit button so user can't confirm without login
-      document.getElementById("subBut").disabled = true;
-   }
+   isAuth();
 
    //fetch apartment listing on load
    let fetchApartment = fetch('./apartments.json')
@@ -67,19 +61,25 @@ let saveDate = () => {
    let eDate = document.getElementById("endDate").value;
 
    if ((sDate && eDate) !== (null || "")) {
-      //write logic for comments below
-      //if (User is authenticated) then open conf page
-      //if not authenticated take to login page, but needs to redirect to conf after login
       localStorage.setItem("sDate", JSON.stringify(sDate))
       localStorage.setItem("eDate", JSON.stringify(eDate))
-      location.assign("./bookConf.html")
+      window.location.assign("./bookConf.html")
    } else {
       window.alert("Please Select a valid Date!")
    }
 }
 
-function goBack() {
+let goBack = () => {
    window.localStorage.removeItem("index");
    window.location.assign("./searchResults.html")
-   // window.open("./searchResults.html")
 }
+
+let isAuth = () => {
+   if ((JSON.parse(window.localStorage.getItem("authenticated")) == true) && (JSON.parse(window.localStorage.getItem("authUser")) !== (null || ""))) {
+      //set nav bar to "Logged in as: " + authUser
+
+   } else {
+      //disable submit button so user can't confirm without login
+      document.getElementById("subBut").disabled = true;
+   }
+};
