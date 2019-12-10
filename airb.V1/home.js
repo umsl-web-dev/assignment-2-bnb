@@ -23,6 +23,4 @@ let search = () => {
    } else {
       window.alert("Please Select a valid set of Date!")
    }
-
-
 }

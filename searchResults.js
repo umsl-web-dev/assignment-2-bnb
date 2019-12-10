@@ -1,14 +1,4 @@
-window.onload = () => {
-   function isAuth() {
-      sEmail = JSON.parse(window.localStorage.getItem("email"))
-      sPass = JSON.parse(window.localStorage.getItem("password"))
-      if ((sEmail && sPass) !== (null || "")) {
-         //User is authenticated
-      } else {
-         //User is not authenticated
-      }
-   }
-}
+
 
 let fetchApartments = fetch('./apartments.json')
 
@@ -16,8 +6,9 @@ fetchApartments.then(res => {
    return res.json();
 }).then(data => {
    let apartment = data;
+   console.log(data);
    displayApartments(apartment);
-   //console.log(apartment)
+   console.log(apartment);
 }).catch(err => {
    console.log('Fetch problem: ' + err)
 })
@@ -32,9 +23,10 @@ function saveIndexValue(index) {
 //Display list of apartments
 function displayApartments(fetchApartments) {
    var mainContainer = document.getElementById("apartments");
+   console.log(fetchApartments);
    for (let i = 0; fetchApartments.length; i++) {
       var div = document.createElement("div");
-      div.innerHTML = `<a onclick="saveIndexValue(${i})"> Title: ${fetchApartments[i].title}</a>`;
+      div.innerHTML = `<a onclick="saveIndexValue(${i})"> ${fetchApartments[i].title}</a>`;
       mainContainer.appendChild(div);
 
       //create UL with li for other props
@@ -59,5 +51,7 @@ function displayApartments(fetchApartments) {
 }
 
 let goHome = () => {
-   location.assign("./airb.V1/home.html")
+   window.location.href = "./airb.V1/home.html";
+   window.localStorage.removeItem("sDate");
+   window.localStorage.removeItem("eDate");
 }
