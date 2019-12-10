@@ -1,26 +1,26 @@
 [
-  {
-    "title": "BnB1",
-    "availability": "January",
-    "price": 100,
-    "description": "Apartment",
-    "address": "MO",
-    "photo": "../resources/apartment1.jpg"
-  },
-  {
-    "title": "BnB2",
-    "availability": "April",
-    "price": 150,
-    "description": "House",
-    "address": "NY",
-    "photo": "../resources/apartment2.jpg"
-  },
-  {
-    "title": "BnB3",
-    "availability": "March",
-    "price": 200,
-    "description": "Condo",
-    "address": "MA",
-    "photo": "../resources/apartment3.jpg"
-  }
+   {
+      "title": "Metro Area Apartment",
+      "availability": "Open",
+      "price": 150,
+      "description": "Metro area apartment on the third floor. Recently went through a complete renovation and has all new appliances.",
+      "address": "St. Louis, Missouri",
+      "photo": "../resources/apartment1.jpg"
+   },
+   {
+      "title": "Downtown Apartment Suite",
+      "availability": "Open",
+      "price": 200,
+      "description": "Located near Ballpark Village, this 18th floor, top level apartment is near your favorite baseball team. Great new interior and a stellar view from the patio.",
+      "address": "St. Louis, Missouri",
+      "photo": "../resources/apartment2.jpg"
+   },
+   {
+      "title": "The Minimalist",
+      "availability": "Open",
+      "price": 100,
+      "description": "A samller loft style apartment, there is one bedroom, a small living room, and a minimal sized kitchen. ",
+      "address": "St. Louis, Missouri",
+      "photo": "../resources/apartment3.jpg"
+   }
 ]
