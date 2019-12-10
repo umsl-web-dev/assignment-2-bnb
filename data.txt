@@ -1,0 +1,42 @@
+data = [
+  {
+    "title": "BnB",
+    "availability": "All the time",
+    "price": "$100",
+    "description": "Full apartment",
+    "address": "UMSL",
+    "photo": "xxx"
+  },
+  {
+    "title": "",
+    "availability": "",
+    "price": "",
+    "description": "",
+    "address": "",
+    "photo": ""
+  },
+  {
+    "title": "",
+    "availability": "",
+    "price": "",
+    "description": "",
+    "address": "",
+    "photo": ""
+  },
+  {
+    "title": "",
+    "availability": "",
+    "price": "",
+    "description": "",
+    "address": "",
+    "photo": ""
+  },
+  {
+    "title": "",
+    "availability": "",
+    "price": "",
+    "description": "",
+    "address": "",
+    "photo": ""
+  }
+]
