@@ -75,11 +75,11 @@ let goBack = () => {
 }
 
 let isAuth = () => {
+   authUser = JSON.parse(window.localStorage.getItem("authUser"));
+   loggedUser = document.getElementById("authUser")
    if ((JSON.parse(window.localStorage.getItem("authenticated")) == true) && (JSON.parse(window.localStorage.getItem("authUser")) !== (null || ""))) {
-      //set nav bar to "Logged in as: " + authUser
-
+      loggedUser.innerHTML = "Signed In As: " + authUser.email;
    } else {
-      //disable submit button so user can't confirm without login
-      document.getElementById("subBut").disabled = true;
+      loggedUser.innerHTML = `<a href="./login.html">Login Now: </a>`;
    }
 };

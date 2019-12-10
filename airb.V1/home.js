@@ -1,15 +1,5 @@
 window.onload = () => {
-   let isAuth = false;
-
-   //if ()
-
-   if (isAuth === true) {
-      let h3 = document.createElement("h3");
-      h3.innerHTML = "Logged in as: ";
-   } else {
-      let h3n = document.createElement("h3");
-      h3n.innerHTML = `<a href="../login.html">Login Now: </a>`;
-   }
+   isAuth();
 };
 
 let search = () => {
@@ -24,3 +14,13 @@ let search = () => {
       window.alert("Please Select a valid set of Date!")
    }
 }
+
+let isAuth = () => {
+   authUser = JSON.parse(window.localStorage.getItem("authUser"));
+   loggedUser = document.getElementById("authUser")
+   if ((JSON.parse(window.localStorage.getItem("authenticated")) == true) && (JSON.parse(window.localStorage.getItem("authUser")) !== (null || ""))) {
+      loggedUser.innerHTML = "Signed In As: " + authUser.email;
+   } else {
+      loggedUser.innerHTML = `<a href="./login.html">Sign Up: </a>`;
+   }
+};
