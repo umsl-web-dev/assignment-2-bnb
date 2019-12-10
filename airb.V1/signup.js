@@ -38,8 +38,7 @@ function signUp() {
 };
 
 function login() {
-   window.close("../airb.V1/signup.html")
-   window.open("../login.html")
+   location.assign("../login.html")
 }
 
 
