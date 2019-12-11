@@ -8,26 +8,23 @@
   <script type="text/javascript" src="apartments.json"></script>
   <script src="searchResults.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel='stylesheet' type='text/css' media='screen' href='searchResults.css'>
 </head>
 
-<<<<<<< HEAD
-<div class="container-fluid">
-
-  <body>
-    <nav>
-      <button onclick="goHome()">Return Home</button>
-    </nav>
-=======
 <body>
-   <nav style="padding-top: 15px; padding-right: 10px;">
-      <h5 id="authUser"></h5>
-      <button style="float: right;" onclick="goHome()">Return Home</button>
-   </nav>
->>>>>>> ceaeeee150776de9de6f4bedb3f582ad6ff73357
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding-top: 15px; padding-right: 10px;">
+    <h5 class="navbar-brand" id="authUser"></h5>
+    <button type="button" class="btn btn-primary" class="navbar-toggler" onclick="goHome()">Return
+      Home</button>
+  </nav>
 
-    <h1>Apartments</h1>
-    <div id="apartments"></div>
-  </body>
-</div>
+  <div class="container-fluid">
+    <div>
+      <div id="apartments" class="col-10" class="row" class="text-center">
+        <h1>Apartments</h1>
+      </div>
+    </div>
+  </div>
+</body>
 
 </html>
