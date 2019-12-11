@@ -33,6 +33,9 @@ function displayApartments(fetchApartments) {
       //create UL with li for other props
       let ul = document.createElement("ul");
       div.appendChild(ul);
+      let img = document.createElement("img");
+      img.src = fetchApartments[i].photo;
+      ul.appendChild(img);
       let liA = document.createElement("li");
       liA.innerHTML = "Availability: " + fetchApartments[i].availability;
       ul.appendChild(liA);
@@ -45,9 +48,8 @@ function displayApartments(fetchApartments) {
       let liADD = document.createElement("li");
       liADD.innerHTML = "Address: " + fetchApartments[i].address;
       ul.appendChild(liADD);
-      let img = document.createElement("img");
-      img.src = fetchApartments[i].photo;
-      ul.appendChild(img);
+      
+      
    }
 }
 
