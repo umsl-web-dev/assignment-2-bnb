@@ -1,6 +1,6 @@
+"use strict"; 
 
 window.onload = () => {
-   //let users = JSON.parse(window.localStorage.getItem("users"))
    if ((JSON.parse(window.localStorage.getItem("authenticated")) == true) && (JSON.parse(window.localStorage.getItem("authUser")) !== (null || ""))) {
       location.assign("./airb.V1/home.html")
    } else {
