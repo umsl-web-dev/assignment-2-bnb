@@ -1,0 +1,79 @@
+.bckgrndIMG
+{
+    background-image: url('./resource/devBed.jpeg');
+    background-position: center;
+    /* background-repeat: no-repeat; */
+    height: 577px;
+    width: auto;
+}
+
+.mainDiv
+{
+    color:rgb(72, 72, 72);
+    background-color: whitesmoke; /*rgb(255, 255, 255);*/
+    box-shadow:rgba(0, 0, 0, 0.12) 0px 16px 40px 0px;
+    font-family:Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+    height:474.667px;
+    line-height:20.02px;
+    padding-top:32px;
+    width:441px;
+}
+
+.searchB
+{
+    border-radius: var(--border-button-border-radius, 4px);
+    font-size: var(--font-button-font-size, 16px);
+    line-height: var(--font-button-line-height, 24px);
+    letter-spacing: var(--font-button-letter-spacing, normal);
+    font-family: var(--font-button-font-family, Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif) !important;
+    text-transform: var(--font-button-text-transform, undefined) !important;
+    padding-top: var(--spacing-button-vertical, 10px) !important;
+    padding-bottom: var(--spacing-button-vertical, 10px) !important;
+    font-weight: var(--font-bold-font-weight, 800) !important;
+    border-width: var(--border-button-border-width, 2px) !important;
+    padding-left: var(--spacing-button-horizontal, 22px) !important;
+    padding-right: var(--spacing-button-horizontal, 22px) !important;
+    box-shadow: var(--shadow-button-level0-box-shadow, none) !important;
+    background: var(--color-buttons-primary-color, #FF5A5F) !important;
+    border-color: var(--color-buttons-primary-border, transparent) !important;
+    color: var(--color-buttons-primary-text, #ffffff) !important;
+}
+
+h1
+{
+    color:#424241;
+    display:block;
+    font-family:Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+    font-size:24px;
+    letter-spacing:normal;
+    line-height:36px;
+    text-size-adjust:100%;
+    width:377px;
+    text-align: center;
+    margin: auto;
+    
+}
+
+h5
+{
+  color:#424241;
+  font-size: 16px;
+  font-weight: 250; 
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+input
+{    
+  letter-spacing: 1px;
+  margin-left: 30px;
+}
+
+select
+{
+  letter-spacing: 1px;
+  margin-left: 30px;
+}
+

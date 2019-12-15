@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>BNB Details</title>
+  <script type="text/javascript" src="apartments.json"></script>
+  <script src="./bnbDetails.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel='stylesheet' type='text/css' media='screen' href='bnbDetails.css'>
+</head>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <h2 class="navbar-brand">Your Next BnB</h2>
+  <h5 class="navbar-brand" id="authUser"></h5>
+  <button style="float: right" type="button" class="btn btn-primary" onclick="goHome()">Return Home</button>
+</nav>
+
+<body>
+  <!-- Main Div -->
+  <div id="main">
+
+
+
+    <!-- Div for Title and Information floated to right of photo -->
+    <div id="child">
+
+      <!-- For the Title -->
+      <nav id="title" class="navbar">
+        <form onsubmit="saveData()">
+          <label>Chose your Start Date: </label>
+          <input type="date" id="startDate" name="date" required />
+          <label>Chose your End Date: </label>
+          <input type="date" id="endDate" name="date" required />
+          <input type="submit" id="subBut" type="button" class="btn btn-primary btn-lg" value="Confirm Your Booking" />
+
+        </form>
+      </nav>
+
+      <div class="container-fluid" class="card" class="row">
+        <!-- For the information -->
+        <div id="info">
+          <ul id="deets">
+          </ul>
+          <!-- For the Photo -->
+          <div id="photo"> </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>
