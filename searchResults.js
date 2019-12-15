@@ -29,26 +29,25 @@ function displayApartments(fetchApartments) {
     var div = document.createElement("div");
     div.innerHTML = `<a onclick="saveIndexValue(${i})"> ${fetchApartments[i].title}</a>`;
     mainContainer.appendChild(div);
+    let img = document.createElement("img");
+    img.src = fetchApartments[i].photo;
+    div.appendChild(img);
 
-
-      //create UL with li for other props
-      let ul = document.createElement("ul");
-      div.appendChild(ul);
-      let img = document.createElement("img");
-      img.src = fetchApartments[i].photo;
-      ul.appendChild(img);
-      let liA = document.createElement("li");
-      liA.innerHTML = "Availability: " + fetchApartments[i].availability;
-      ul.appendChild(liA);
-      let liP = document.createElement("li");
-      liP.innerHTML = "Price: " + fetchApartments[i].price;
-      ul.appendChild(liP);
-      let liD = document.createElement("li");
-      liD.innerHTML = "Description: " + fetchApartments[i].description;
-      ul.appendChild(liD);
-      let liADD = document.createElement("li");
-      liADD.innerHTML = "Address: " + fetchApartments[i].address;
-      ul.appendChild(liADD);
+    //create UL with li for other props
+    let ul = document.createElement("ul");
+    div.appendChild(ul);
+    let liA = document.createElement("li");
+    liA.innerHTML = "Availability: " + fetchApartments[i].availability;
+    ul.appendChild(liA);
+    let liP = document.createElement("li");
+    liP.innerHTML = "Price: " + fetchApartments[i].price;
+    ul.appendChild(liP);
+    let liD = document.createElement("li");
+    liD.innerHTML = "Description: " + fetchApartments[i].description;
+    ul.appendChild(liD);
+    let liADD = document.createElement("li");
+    liADD.innerHTML = "Address: " + fetchApartments[i].address;
+    ul.appendChild(liADD);
   }
 
 }
